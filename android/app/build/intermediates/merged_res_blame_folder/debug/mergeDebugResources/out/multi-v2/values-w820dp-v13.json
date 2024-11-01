@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "android.app-mergeDebugResources-84:/values-w820dp-v13/values-w820dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\ahmed\\.gradle\\caches\\transforms-4\\e4a9027d5baa058a40c8f9226054ced5\\transformed\\jetified-flutter_sound_core-9.2.13\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    }
+                }
+            ]
+        }
+    ]
+}

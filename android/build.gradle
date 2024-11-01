@@ -1,0 +1,33 @@
+buildscript {
+    ext.kotlin_version = '1.9.10' // Update this to your Kotlin version
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://plugins.gradle.org/m2/' } // Required for the OneSignal plugin
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.6.0' // Ensure your Gradle version is correct
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.14.0' // Use this specific version
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://plugins.gradle.org/m2/' } // Ensure this is included
+    }
+}
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            project.android {
+                if (namespace == null) {
+                    namespace project.group
+                }
+            }
+        }
+    }
+}
